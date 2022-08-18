@@ -4,6 +4,11 @@ Created on Wed Aug 10 16:38:15 2022
 
 @author: Asus
 """
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Aug 10 16:38:15 2022
+@author: Asus
+"""
 # Problem Set 6: 6.00 Word Game
 # Name: Word Game
 # Collaborators: 
@@ -58,7 +63,6 @@ def get_frequency_dict(sequence):
     Returns a dictionary where the keys are elements of the sequence
     and the values are integer counts, for the number of times that
     an element is repeated in the sequence.
-
     sequence: string or list
     return: dictionary
     """
@@ -79,14 +83,11 @@ def get_word_score(word, n): #DONE!
     """
     Returns the score for a word. Assumes the word is a
     valid word.
-
     The score for a word is the sum of the points for letters
     in the word, plus 50 points if all n letters are used on
     the first go.
-
     Letters are scored as in Scrabble; A is worth 1, B is
     worth 3, C is worth 3, D is worth 2, E is worth 1, and so on.
-
     word: string (lowercase letters)
     returns: int >= 0
     """
@@ -107,13 +108,11 @@ def get_word_score(word, n): #DONE!
 def display_hand(hand): 
     """
     Displays the letters currently in the hand.
-
     For example:
        display_hand({'a':1, 'x':2, 'l':3, 'e':1})
     Should print out something like:
        a x x l l l e
     The order of the letters is unimportant.
-
     hand: dictionary (string -> int)
     """
     for letter in hand.keys():
@@ -128,11 +127,9 @@ def deal_hand(n):
     """
     Returns a random hand containing n lowercase letters.
     At least n/3 the letters in the hand should be VOWELS.
-
     Hands are represented as dictionaries. The keys are
     letters and the values are the number of times the
     particular letter is repeated in that hand.
-
     n: int >= 0
     returns: dictionary (string -> int)
     """
@@ -158,12 +155,9 @@ def update_hand(hand, word): #DONE!
     In other words, this assumes that however many times
     a letter appears in 'word', 'hand' has at least as
     many of that letter in it. 
-
     Updates the hand: uses up the letters in the given word
     and returns the new hand, without those letters in it.
-
     Has no side effects: does not mutate hand.
-
     word: string
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
@@ -213,28 +207,20 @@ def is_valid_word(word, hand, word_list):
 def play_hand(hand, word_list):
     """
     Allows the user to play the given hand, as follows:
-
     * The hand is displayed.
     
     * The user may input a word.
-
     * An invalid word is rejected, and a message is displayed asking
       the user to choose another word.
-
     * When a valid word is entered, it uses up letters from the hand.
-
     * After every valid word: the score for that word and the total
       score so far are displayed, the remaining letters in the hand 
       are displayed, and the user is asked to input another word.
-
     * The sum of the word scores is displayed when the hand finishes.
-
     * The hand finishes when there are no more unused letters.
       The user can also finish playing the hand by inputing a single
       period (the string '.') instead of a word.
-
     * The final score is displayed.
-
       hand: dictionary (string -> int)
       word_list: list of lowercase strings
     """
@@ -284,16 +270,11 @@ def play_hand(hand, word_list):
 def play_game(word_list):
     """
     Allow the user to play an arbitrary number of hands.
-
     * Asks the user to input 'n' or 'r' or 'e'.
-
     * If the user inputs 'n', let the user play a new (random) hand.
       When done playing the hand, ask the 'n' or 'e' question again.
-
     * If the user inputs 'r', let the user play the last hand again.
-
     * If the user inputs 'e', exit the game.
-
     * If the user inputs anything else, ask them again.
     """
     # TO DO ...
