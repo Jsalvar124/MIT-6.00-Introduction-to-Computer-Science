@@ -7,6 +7,7 @@ Created on Sat Jul 30 12:20:58 2022
 from math import *
 
 #finds the 1000th prime
+limit=1000
 p=3; #inicializa el primer primo
 primes=[2];
 counter=1
@@ -26,10 +27,10 @@ while True:
     else:
         p+=2
         isprime=True
-    if counter==10:
+    if counter==limit:
         break
-print(primes)
-print(primes[9])
+#print(primes)
+print("the %dth prime is %d" %(limit,primes[-1]))
 
 
 def isThisNumPrime(N):
@@ -71,7 +72,8 @@ import matplotlib.pyplot as plt
 
 ratios=[]
 Ns=[]
-for i in range(1,10000,2):
+end=1000
+for i in range(1,end,2):
     primes, acum, ratio=sumLogPrimesTill(i)
     ratios.append(ratio)
     Ns.append(i)
